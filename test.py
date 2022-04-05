@@ -24,6 +24,7 @@ button = st.button("Push me")
 if button:
 	try:
 		num = next(my_list)
+		st.write(num)
 		if len(combinations_df['y/n'][i]) < 1 and len(combinations_df['skip?'][i]) < 1:
 	    		b = f"Is {combinations_df[0][i]} related to {combinations_df[1][i]}?"
 	    		st.write(b)
