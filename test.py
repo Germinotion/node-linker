@@ -4,6 +4,6 @@ import pandas as pd
 
 
 st.title('Hello World')
-df = pd.read_csv('https://github.com/Germinotion/node-linker/blob/main/skills.csv')
+df = pd.read_csv('./skills.csv')
 
 st.dataframe(df)
