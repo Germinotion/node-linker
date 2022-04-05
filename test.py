@@ -7,13 +7,12 @@ import requests
 # open('skills.xlsx', 'wb').write(r.content)
 # df = pd.read_excel('skills.xlsx')
 
-csv = st.file_uploader('Upload a CSV')
 
 
 
 st.title('Hello World')
 # # df = pd.read_csv('./skills.csv')
-df = pd.read_csv(csv)
+df = pd.read_csv('https://github.com/Germinotion/node-linker/blob/main/skills.csv')
 # https://docs.google.com/spreadsheets/d/1R-17pEYYikiOUgCXypFcQIcYAIwL-hFr/edit?usp=sharing&ouid=100405249699989593907&rtpof=true&sd=true
 st.dataframe(df)
 
