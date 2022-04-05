@@ -18,7 +18,7 @@ st.dataframe(combinations_df)
 def iter_list(x):
 	return iter(list(range(x)))
 
-my_list = iter_list(combinations_df[0][:10])
+my_list = iter_list(len(combinations_df[0][:10]))
 
 button = st.button("Push me")
 
