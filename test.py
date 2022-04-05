@@ -4,8 +4,8 @@ import requests
 
 url = 'https://docs.google.com/spreadsheets/d/1R-17pEYYikiOUgCXypFcQIcYAIwL-hFr/edit?usp=sharing&ouid=100405249699989593907&rtpof=true&sd=true'
 r = requests.get(url)
-open('skills.xls', 'wb').write(r.content)
-df = pd.read_excel('skills.xls')
+open('skills.xlsx', 'wb').write(r.content)
+df = pd.read_excel('skills.xlsx')
 
 
 
