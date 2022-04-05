@@ -1,20 +1,17 @@
 import streamlit as st
 import pandas as pd
 import requests
-
-# url = 'https://docs.google.com/spreadsheets/d/1R-17pEYYikiOUgCXypFcQIcYAIwL-hFr/edit?usp=sharing&ouid=100405249699989593907&rtpof=true&sd=true'
-# r = requests.get(url)
-# open('skills.xlsx', 'wb').write(r.content)
-# df = pd.read_excel('skills.xlsx')
-
-
-
+from itertools import combinations
 
 st.title('Hello World')
-# # df = pd.read_csv('./skills.csv')
 df = pd.read_csv('https://raw.githubusercontent.com/Germinotion/node-linker/main/skills.csv')
-# https://docs.google.com/spreadsheets/d/1R-17pEYYikiOUgCXypFcQIcYAIwL-hFr/edit?usp=sharing&ouid=100405249699989593907&rtpof=true&sd=true
-st.dataframe(df)
+# st.dataframe(df)
+
+combinations_df = pd.DataFrame (list(combinations(names, 2)))
+combinations_df['y/n'] = ''
+combinations_df['skip?'] = ''
+
+st.dataframe(combinations_df)
 
 my_button = st.button('Push me!')
 
