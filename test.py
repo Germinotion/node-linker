@@ -6,7 +6,7 @@ from itertools import combinations
 st.title('Hello World')
 df = pd.read_csv('https://raw.githubusercontent.com/Germinotion/node-linker/main/skills.csv')
 # st.dataframe(df)
-
+names = df.name
 combinations_df = pd.DataFrame (list(combinations(names, 2)))
 combinations_df['y/n'] = ''
 combinations_df['skip?'] = ''
