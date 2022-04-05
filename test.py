@@ -15,20 +15,17 @@ combinations_df['skip?'] = ''
 st.dataframe(combinations_df)
 
 @st.experimental_singleton
-def iter_list():
-	x = len(combinations_df[0][:10])
-	return iter(list(range()))
+def iter_list(x):
+	return iter(list(range(x)))
 
-my_list = iter_list()
+my_list = iter_list(combinations_df[0][:10])
 
 button = st.button("Push me")
 
 if button:
 	try:
-# 		num = next(my_list)
-# 		st.write(num)
-# 		if len(combinations_df['y/n'][i]) < 1 and len(combinations_df['skip?'][i]) < 1:
 		num = next(my_list)
+# 		if len(combinations_df['y/n'][i]) < 1 and len(combinations_df['skip?'][i]) < 1:
 		st.write(num)
 		b = f"Is {combinations_df[0][i]} related to {combinations_df[1][i]}?"
 		st.write(b)
