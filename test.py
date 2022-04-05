@@ -28,10 +28,10 @@ if button:
 		if len(combinations_df['y/n'][i]) < 1 and len(combinations_df['skip?'][i]) < 1:
 			num = next(my_list)
 			st.write(num)
-	    		b = f"Is {combinations_df[0][i]} related to {combinations_df[1][i]}?"
-	    		st.write(b)
+			b = f"Is {combinations_df[0][i]} related to {combinations_df[1][i]}?"
+			st.write(b)
 	# 		st.write(num)
-		    	button = False
+			button = False
 	except:
 		iter_list.clear()
 		button = False
