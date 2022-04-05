@@ -15,10 +15,16 @@ combinations_df['skip?'] = ''
 st.dataframe(combinations_df)
 
 @st.experimental_singleton
+def get_len(x):
+	return len(combinations_df[0])
+
+@st.experimental_singleton
 def iter_list(x):
 	return iter(list(range(x)))
 
-my_list = iter_list(len(combinations_df[0][:10]))
+my_len = get_len(combinations_df[0])
+
+my_list = iter_list(my_len)
 
 button = st.button("Push me")
 
