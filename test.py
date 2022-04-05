@@ -12,7 +12,7 @@ import requests
 
 st.title('Hello World')
 # # df = pd.read_csv('./skills.csv')
-df = pd.read_csv('https://github.com/Germinotion/node-linker/blob/main/skills.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Germinotion/node-linker/main/skills.csv')
 # https://docs.google.com/spreadsheets/d/1R-17pEYYikiOUgCXypFcQIcYAIwL-hFr/edit?usp=sharing&ouid=100405249699989593907&rtpof=true&sd=true
 st.dataframe(df)
 
